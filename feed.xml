@@ -5,16 +5,16 @@
 		<link>https://github.com/kamachi626/rss.kama.show</link>
 		<description>ChatGPTが興味適合度を基に選定したパーソナルニュースフィード</description>
 		<language>ja</language>
-		<lastBuildDate>Sat, 22 Aug 2026 18:56:17 +0900</lastBuildDate>
+		<lastBuildDate>Sun, 23 Aug 2026 08:04:15 +0900</lastBuildDate>
 		<atom:link href="https://raw.githubusercontent.com/kamachi626/rss.kama.show/main/feed.xml" rel="self" type="application/rss+xml" />
 
 		<item>
-			<title>Cloudflare、Browser Runの同時ブラウザ上限を120から200へ拡大</title>
-			<link>https://developers.cloudflare.com/changelog/product-group/ai/</link>
-			<guid isPermaLink="true">https://developers.cloudflare.com/changelog/product-group/ai/</guid>
-			<pubDate>Thu, 20 Aug 2026 00:00:00 +0900</pubDate>
+			<title>Stripe、AIモデルルーターOpenRouterの買収で合意</title>
+			<link>https://stripe.com/fr-ca/newsroom/news/stripe-agrees-to-acquire-openrouter</link>
+			<guid isPermaLink="true">https://stripe.com/fr-ca/newsroom/news/stripe-agrees-to-acquire-openrouter</guid>
+			<pubDate>Wed, 19 Aug 2026 00:00:00 +0900</pubDate>
 			<category>テック・開発</category>
-			<description><![CDATA[Cloudflareは8月20日、Workers PaidのBrowser Runについて、同時ブラウザ数を120から200、新規ブラウザインスタンス生成を毎秒1から3、Quick Actionsを毎秒10から30へ引き上げた。ブラウザ自動化やAIエージェントをWorkers上で構築する際の実用上限が大きく改善している。<br/><br/><strong>なぜ注目:</strong> Workers上でブラウザ操作やエージェント機能を組む際に、そのまま設計上の上限とコスト感に効く更新。]]></description>
+			<description><![CDATA[Stripeが、80社超・400以上のAIモデルを横断してルーティングするOpenRouterの買収で合意した。StripeはToken Billingなど既存のAI向け課金基盤と組み合わせ、モデル選択、速度、価格、トークン利用を一体で最適化する構想を示している。<br/><br/><strong>なぜ注目:</strong> 複数LLMを抽象化するモデルルーターが決済・課金インフラと統合される動きで、今後のSaaS設計にも影響しうる。]]></description>
 		</item>
 
 		<item>
@@ -36,24 +36,6 @@
 		</item>
 
 		<item>
-			<title>Stripe、AIモデルルーターOpenRouterの買収で合意</title>
-			<link>https://stripe.com/fr-ca/newsroom/news/stripe-agrees-to-acquire-openrouter</link>
-			<guid isPermaLink="true">https://stripe.com/fr-ca/newsroom/news/stripe-agrees-to-acquire-openrouter</guid>
-			<pubDate>Wed, 19 Aug 2026 00:00:00 +0900</pubDate>
-			<category>テック・開発</category>
-			<description><![CDATA[Stripeが、80社超・400以上のAIモデルを横断してルーティングするOpenRouterの買収で合意した。StripeはToken Billingなど既存のAI向け課金基盤と組み合わせ、モデル選択、速度、価格、トークン利用を一体で最適化する構想を示している。<br/><br/><strong>なぜ注目:</strong> 複数LLMを抽象化するモデルルーターが決済・課金インフラと統合される動きで、今後のSaaS設計にも影響しうる。]]></description>
-		</item>
-
-		<item>
-			<title>Cloudflare、Durable ObjectsにDeploymentsタブを追加</title>
-			<link>https://developers.cloudflare.com/changelog/product/workers/</link>
-			<guid isPermaLink="true">https://developers.cloudflare.com/changelog/product/workers/</guid>
-			<pubDate>Thu, 20 Aug 2026 00:00:00 +0900</pubDate>
-			<category>テック・開発</category>
-			<description><![CDATA[CloudflareはDurable Object namespaceのダッシュボードにDeploymentsタブを追加した。バックエンドWorkerの稼働バージョン、トラフィック分割、リクエスト数、エラー率、wall timeをDurable Objects側から直接確認できる。<br/><br/><strong>なぜ注目:</strong> Workers/Durable Objectsで段階デプロイや状態管理を行う場合、運用時の観測性が改善する実務的な更新。]]></description>
-		</item>
-
-		<item>
 			<title>Cloudflare Workers AIにQwen 3.8 27B、画像入力と262Kコンテキスト対応</title>
 			<link>https://developers.cloudflare.com/changelog/product/workers-ai/</link>
 			<guid isPermaLink="true">https://developers.cloudflare.com/changelog/product/workers-ai/</guid>
@@ -63,12 +45,12 @@
 		</item>
 
 		<item>
-			<title>SK hynix、日本で大規模メモリー工場建設を検討との報道</title>
-			<link>https://www.reuters.com/world/asia-pacific/south-koreas-sk-hynix-considers-building-memory-chip-plant-japan-hankyoreh-2026-08-21/</link>
-			<guid isPermaLink="true">https://www.reuters.com/world/asia-pacific/south-koreas-sk-hynix-considers-building-memory-chip-plant-japan-hankyoreh-2026-08-21/</guid>
+			<title>Cloudflare APIの403応答にdocumentation_url、権限不足の自己解決を支援</title>
+			<link>https://developers.cloudflare.com/changelog/post/2026-08-20-contextual-403s/</link>
+			<guid isPermaLink="true">https://developers.cloudflare.com/changelog/post/2026-08-20-contextual-403s/</guid>
 			<pubDate>Fri, 21 Aug 2026 00:00:00 +0900</pubDate>
-			<category>経済・企業</category>
-			<description><![CDATA[Reutersによると、SK hynixが宮城県を候補としてメモリー半導体工場への大規模投資を検討していると韓国紙が報道した。実現すれば韓国半導体メーカーによる日本初の大型製造投資となる可能性があるが、SK hynixは最終決定していない。<br/><br/><strong>なぜ注目:</strong> AI向けメモリー需要と日本の半導体投資が交差する案件で、国内製造業・関連銘柄を見るうえで重要。]]></description>
+			<category>テック・開発</category>
+			<description><![CDATA[Cloudflareは8月21日、APIの403 Forbidden応答に、拒否されたエンドポイントのドキュメントへ直接つながるdocumentation_urlを追加した。対象はほぼ全製品APIで、リンク先から必要なロールや権限を確認できる。人手のトラブルシュートだけでなく、エージェントが拒否理由を読み取り、権限申請フローへつなげる用途も想定されている。<br/><br/><strong>なぜ注目:</strong> Cloudflare APIを使う開発とAIエージェントの権限処理の双方に直結し、403時の自動復旧・承認フローを設計しやすくなる。]]></description>
 		</item>
 
 		<item>
@@ -77,16 +59,16 @@
 			<guid isPermaLink="true">https://www.reuters.com/world/asia-pacific/japan-manufacturing-expands-orders-rise-fastest-since-2018-pmi-shows-2026-08-21/</guid>
 			<pubDate>Fri, 21 Aug 2026 00:00:00 +0900</pubDate>
 			<category>経済・企業</category>
-			<description><![CDATA[8月のS&amp;P Global日本製造業PMI速報値は55.1へ上昇し、新規受注は2018年1月以来の強い伸びとなった。半導体やAI関連需要が生産・海外受注を押し上げ、サービスを含む総合指数も改善している。<br/><br/><strong>なぜ注目:</strong> 日本株を見るうえで、景気悪化ではなくAI・半導体主導の製造業回復が進んでいるかを測る材料になる。]]></description>
+			<description><![CDATA[8月のS&P Global日本製造業PMI速報値は55.1へ上昇し、新規受注は2018年1月以来の強い伸びとなった。半導体やAI関連需要が生産・海外受注を押し上げ、サービスを含む総合指数も改善している。<br/><br/><strong>なぜ注目:</strong> 日本株を見るうえで、景気悪化ではなくAI・半導体主導の製造業回復が進んでいるかを測る材料になる。]]></description>
 		</item>
 
 		<item>
-			<title>日本の7月輸出・輸入がともに過去最高、半導体需要と原油高が押し上げ</title>
-			<link>https://www.reuters.com/world/asia-pacific/japans-exports-jump-23-monthly-record-july-2026-08-20/</link>
-			<guid isPermaLink="true">https://www.reuters.com/world/asia-pacific/japans-exports-jump-23-monthly-record-july-2026-08-20/</guid>
-			<pubDate>Thu, 20 Aug 2026 00:00:00 +0900</pubDate>
+			<title>SK hynix、日本で大規模メモリー工場建設を検討との報道</title>
+			<link>https://www.reuters.com/world/asia-pacific/south-koreas-sk-hynix-considers-building-memory-chip-plant-japan-hankyoreh-2026-08-21/</link>
+			<guid isPermaLink="true">https://www.reuters.com/world/asia-pacific/south-koreas-sk-hynix-considers-building-memory-chip-plant-japan-hankyoreh-2026-08-21/</guid>
+			<pubDate>Fri, 21 Aug 2026 00:00:00 +0900</pubDate>
 			<category>経済・企業</category>
-			<description><![CDATA[日本の7月輸出額は前年比23.2％増の11.5兆円、輸入額は27.8％増の12.1兆円で、ともに過去最高となった。輸出はAIデータセンター向け半導体関連が牽引し、輸入は原油高の影響が大きく、貿易収支は6345億円の赤字。<br/><br/><strong>なぜ注目:</strong> AI需要の恩恵とエネルギー高の負担が同時に出ており、日本企業・為替・金融政策を考えるうえで見やすい指標。]]></description>
+			<description><![CDATA[Reutersによると、SK hynixが宮城県を候補としてメモリー半導体工場への大規模投資を検討していると韓国紙が報道した。実現すれば韓国半導体メーカーによる日本初の大型製造投資となる可能性があるが、SK hynixは最終決定していない。<br/><br/><strong>なぜ注目:</strong> AI向けメモリー需要と日本の半導体投資が交差する案件で、国内製造業・関連銘柄を見るうえで重要。]]></description>
 		</item>
 
 		<item>
@@ -117,30 +99,21 @@
 		</item>
 
 		<item>
-			<title>カタール航空、欧州行きセールで最大12％オフ</title>
-			<link>https://www.traicy.com/posts/20260817378710/</link>
-			<guid isPermaLink="true">https://www.traicy.com/posts/20260817378710/</guid>
-			<pubDate>Mon, 17 Aug 2026 08:15:00 +0900</pubDate>
+			<title>Peach、成田〜仁川線を9月20日開設　片道5,680円から</title>
+			<link>https://travel.watch.impress.co.jp/docs/news/2134254.html</link>
+			<guid isPermaLink="true">https://travel.watch.impress.co.jp/docs/news/2134254.html</guid>
+			<pubDate>Thu, 20 Aug 2026 19:00:00 +0900</pubDate>
 			<category>旅行・モビリティ</category>
-			<description><![CDATA[カタール航空が日本発欧州方面を対象に最大12％オフのセールを実施。羽田発エコノミー往復の例ではマドリード14万1,560円、プラハ18万5,560円、ミラノ19万2,030円、ロンドン21万4,480円など。搭乗期間は11月1日〜2027年2月28日。<br/><br/><strong>なぜ注目:</strong> 欧州往復10万円前後を狙う基準からは高めだが、冬の欧州運賃の比較基準として使える。]]></description>
+			<description><![CDATA[Peach Aviationは9月20日に成田〜仁川線を開設する。運賃は片道5,680円からで、MM651便は成田9時30分発・仁川12時25分着、復路MM652便は仁川13時35分発・成田16時15分着の毎日運航。短い休暇でも現地滞在時間を取りやすい昼間帯のダイヤとなっている。<br/><br/><strong>なぜ注目:</strong> 成田発で価格と時間効率の両方が良く、近距離海外の実用的な新候補になる。]]></description>
 		</item>
 
 		<item>
-			<title>シンガポール航空、成田〜ロサンゼルス往復を最大5,000円割引</title>
-			<link>https://news.livedoor.com/article/detail/32078724/</link>
-			<guid isPermaLink="true">https://news.livedoor.com/article/detail/32078724/</guid>
-			<pubDate>Sun, 16 Aug 2026 15:15:00 +0900</pubDate>
-			<category>旅行・モビリティ</category>
-			<description><![CDATA[シンガポール航空は8月24日まで、成田〜ロサンゼルス線のエコノミー往復航空券を最大5,000円割り引く。クリスフライヤー会員が公式サイトまたはアプリから予約する必要があり、搭乗期間は12月1日〜2027年2月28日。<br/><br/><strong>なぜ注目:</strong> 成田発・スターアライアンス系で米国往復を比較する際の具体的な候補になる。]]></description>
-		</item>
-
-		<item>
-			<title>内耳の骨形態から4万年のHomo sapiens集団史を復元</title>
-			<link>https://www.nature.com/articles/s41467-026-76423-5</link>
-			<guid isPermaLink="true">https://www.nature.com/articles/s41467-026-76423-5</guid>
-			<pubDate>Wed, 12 Aug 2026 00:00:00 +0900</pubDate>
+			<title>AustralopithecusとParanthropusもHomo属に？人類系統分類の再編案</title>
+			<link>https://doi.org/10.1002/ajpa.70344</link>
+			<guid isPermaLink="true">https://doi.org/10.1002/ajpa.70344</guid>
+			<pubDate>Wed, 19 Aug 2026 00:00:00 +0900</pubDate>
 			<category>科学・知識</category>
-			<description><![CDATA[Nature Communicationsの研究で、北東アフリカの約4万4,000年前〜3,000年前のHomo sapiens 148個体について内耳の骨迷路形態を比較。DNAが得にくい地域でも、形態差から長期的な集団の分化・交流・孤立を追えることを示した。<br/><br/><strong>なぜ注目:</strong> 人類拡散や共通祖先の話題と直接つながり、DNA以外から集団史を復元する手法そのものも面白い。]]></description>
+			<description><![CDATA[American Journal of Biological Anthropology掲載の論考でIan Towle氏は、AustralopithecusとParanthropusを拡張したHomo属へ含める分類案を提示した。化石形態のモザイク性、遺伝子流動、従来の属を分ける特徴の曖昧化などを理由に、単系統群をより一貫して反映する分類を提案している。現時点では学界の合意ではなく、分類学上の提案である。<br/><br/><strong>なぜ注目:</strong> 人類進化の「属・種を何で分けるか」という問題そのものを扱い、AustralopithecusとHomoの境界を考える材料として非常に直接的。]]></description>
 		</item>
 
 		<item>
@@ -158,7 +131,7 @@
 			<guid isPermaLink="true">https://prtimes.jp/main/html/rd/p/000000462.000024449.html</guid>
 			<pubDate>Sat, 22 Aug 2026 00:00:00 +0900</pubDate>
 			<category>ローカル・ライフ</category>
-			<description><![CDATA[佐倉市とイオンタウンなどが、8月22日から29日までイオンタウンユーカリが丘で「summer base in イオンタウン」を開催。涼しい屋内のフリースペース、段ボール迷路、工作などを用意する。基本時間は10時〜21時。<br/><br/><strong>なぜ注目:</strong> 自宅周辺で今日から始まる地域イベントとして近く、気軽に立ち寄れる。]]></description>
+			<description><![CDATA[佐倉市とイオンタウンなどが、8月22日から29日までイオンタウンユーカリが丘で「summer base in イオンタウン」を開催。涼しい屋内のフリースペース、段ボール迷路、工作などを用意する。基本時間は10時〜21時。<br/><br/><strong>なぜ注目:</strong> 自宅周辺で開催中の地域イベントとして近く、気軽に立ち寄れる。]]></description>
 		</item>
 
 		<item>
@@ -167,7 +140,7 @@
 			<guid isPermaLink="true">https://www.premiumoutlets.co.jp/shisui/calendar/</guid>
 			<pubDate>Fri, 21 Aug 2026 00:00:00 +0900</pubDate>
 			<category>ローカル・ライフ</category>
-			<description><![CDATA[酒々井プレミアム・アウトレットで8月21日〜30日に大型バーゲンを開催。施設全体では最大80％OFF。ショップニュースではG-Star Rawの2点以上50％OFF、Regalのクリアランスなども掲載され、22〜23日はヒルトン成田のキッチンカーも出店する。<br/><br/><strong>なぜ注目:</strong> 自宅から行きやすく、服・靴を現物確認しながらセールを拾えるので行動価値が高い。]]></description>
+			<description><![CDATA[酒々井プレミアム・アウトレットで8月21日〜30日に大型バーゲンを開催。施設全体では最大80％OFF。ショップニュースではG-Star Rawの2点以上50％OFF、Regalのクリアランスなども掲載され、22〜23日はヒルトン成田のキッチンカーも出店する。<br/><br/><strong>なぜ注目:</strong> 近場で服・靴を現物確認しながらセールを拾えるので行動価値が高い。]]></description>
 		</item>
 
 		<item>
@@ -189,21 +162,12 @@
 		</item>
 
 		<item>
-			<title>フレン・E・ルスタリオ、1stミニアルバムと初ソロライブを発表</title>
-			<link>https://www.anycolor.co.jp/news/8z8my092rz</link>
-			<guid isPermaLink="true">https://www.anycolor.co.jp/news/8z8my092rz</guid>
-			<pubDate>Thu, 20 Aug 2026 23:00:00 +0900</pubDate>
-			<category>ローカル・ライフ</category>
-			<description><![CDATA[にじさんじのフレン・E・ルスタリオが1st Mini Album『FACETS』を12月2日に発売し、2027年2月6日に初ソロライブ「smilE」を開催すると発表。アルバム初回生産分にはライブ先行抽選シリアルが封入される。<br/><br/><strong>なぜ注目:</strong> 視聴・ライブ参加につながる具体的な日程が出たVTuberニュースで、追う価値がある。]]></description>
-		</item>
-
-		<item>
 			<title>幕張ベイパークで夜の大型マルシェ、8月22・23日に90店超が集結</title>
 			<link>https://prtimes.jp/main/html/rd/p/000000028.000184472.html</link>
 			<guid isPermaLink="true">https://prtimes.jp/main/html/rd/p/000000028.000184472.html</guid>
 			<pubDate>Fri, 14 Aug 2026 18:51:00 +0900</pubDate>
 			<category>ローカル・ライフ</category>
-			<description><![CDATA[幕張ベイパーク若葉3丁目公園で8月22日・23日の16時〜21時、「NEIGHBORHOOD MARCHE vol.5」を開催。マルシェ60店舗以上とキッチンカー30台以上が集まり、音楽ライブやライブペインティングも実施する。入場無料で、海浜幕張駅から徒歩約13分。<br/><br/><strong>なぜ注目:</strong> 千葉県内で今夜・明日に行けるイベントで、食・買い物だけでなく音楽やアートもあり、短時間の外出先として実用性が高い。]]></description>
+			<description><![CDATA[幕張ベイパーク若葉3丁目公園で8月22日・23日の16時〜21時、「NEIGHBORHOOD MARCHE vol.5」を開催。マルシェ60店舗以上とキッチンカー30台以上が集まり、音楽ライブやライブペインティングも実施する。入場無料で、海浜幕張駅から徒歩約13分。<br/><br/><strong>なぜ注目:</strong> 千葉県内で今日行けるイベントで、食・買い物だけでなく音楽やアートもあり、短時間の外出先として実用性が高い。]]></description>
 		</item>
 
 	</channel>
