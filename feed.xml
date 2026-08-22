@@ -5,14 +5,14 @@
 		<link>https://github.com/kamachi626/rss.kama.show</link>
 		<description>ChatGPTが興味適合度を基に選定したパーソナルニュースフィード</description>
 		<language>ja</language>
-		<lastBuildDate>Sat, 22 Aug 2026 12:22:00 +0900</lastBuildDate>
+		<lastBuildDate>Sat, 22 Aug 2026 12:37:00 +0900</lastBuildDate>
 		<atom:link href="https://raw.githubusercontent.com/kamachi626/rss.kama.show/main/feed.xml" rel="self" type="application/rss+xml" />
 
 		<item>
 			<title>Cloudflare、Browser Runの同時ブラウザ上限を120から200へ拡大</title>
 			<link>https://developers.cloudflare.com/changelog/product-group/ai/</link>
 			<guid isPermaLink="true">https://developers.cloudflare.com/changelog/product-group/ai/</guid>
-			<category>AI・ソフトウェア開発</category>
+			<category>テック・開発</category>
 			<description><![CDATA[Cloudflareは8月20日、Workers PaidのBrowser Runについて、同時ブラウザ数を120から200、新規ブラウザインスタンス生成を毎秒1から3、Quick Actionsを毎秒10から30へ引き上げた。ブラウザ自動化やAIエージェントをWorkers上で構築する際の実用上限が大きく改善している。]]></description>
 		</item>
 
@@ -20,7 +20,7 @@
 			<title>Cloudflare、WSL/macOSのローカルContainers開発でFUSEを自動サポート</title>
 			<link>https://developers.cloudflare.com/changelog/post/2026-08-20-fuse-local-development/</link>
 			<guid isPermaLink="true">https://developers.cloudflare.com/changelog/post/2026-08-20-fuse-local-development/</guid>
-			<category>Cloudflare・Docker</category>
+			<category>テック・開発</category>
 			<description><![CDATA[MiniflareがローカルContainersにFUSE利用に必要なDocker権限を自動付与するようになった。wrangler dev、Cloudflare Vite plugin、Miniflareに適用され、特にWSLやmacOS上のDocker VMで利用可能。R2をFUSEマウントするような開発フローが扱いやすくなる。]]></description>
 		</item>
 
@@ -28,7 +28,7 @@
 			<title>Cloudflare AI Gateway、GPT-5.6 Solを9月18日まで50％割引</title>
 			<link>https://developers.cloudflare.com/changelog/product/ai-gateway/</link>
 			<guid isPermaLink="true">https://developers.cloudflare.com/changelog/product/ai-gateway/</guid>
-			<category>AI・Cloudflare</category>
+			<category>テック・開発</category>
 			<description><![CDATA[Cloudflare AI GatewayのUnified Billing経由でGPT-5.6 Solが期間限定50％割引。入力は100万トークンあたり2.50ドル、出力15ドル、キャッシュ読み取り0.25ドル。BYOKは対象外で、キャンペーンは2026年9月18日まで。AI Gateway利用を検討する場合は費用比較の価値が高い。]]></description>
 		</item>
 
@@ -36,7 +36,7 @@
 			<title>香港エクスプレス、成田・羽田〜香港など片道3,000円からのフラッシュセール</title>
 			<link>https://www.traicy.com/posts/20260821379735/</link>
 			<guid isPermaLink="true">https://www.traicy.com/posts/20260821379735/</guid>
-			<category>旅行・航空</category>
+			<category>旅行・モビリティ</category>
 			<description><![CDATA[香港エクスプレス航空が8月23日までフラッシュセールを実施。羽田・成田・関西〜香港線がウルトラライト片道3,000円から。搭乗期間は9月1日〜10月31日。一方で燃油サーチャージは片道14,300円、諸税も別途必要なため、表示運賃だけでなく総額比較が必要。]]></description>
 		</item>
 
@@ -44,7 +44,7 @@
 			<title>SK hynix、日本で大規模メモリー工場建設を検討との報道</title>
 			<link>https://www.reuters.com/world/asia-pacific/south-koreas-sk-hynix-considers-building-memory-chip-plant-japan-hankyoreh-2026-08-21/</link>
 			<guid isPermaLink="true">https://www.reuters.com/world/asia-pacific/south-koreas-sk-hynix-considers-building-memory-chip-plant-japan-hankyoreh-2026-08-21/</guid>
-			<category>企業・半導体</category>
+			<category>経済・企業</category>
 			<description><![CDATA[Reutersによると、SK hynixが宮城県を候補としてメモリー半導体工場への大規模投資を検討していると韓国紙が報道した。実現すれば韓国半導体メーカーによる日本初の大型製造投資となる可能性があるが、SK hynixは現時点で最終決定していないとしている。]]></description>
 		</item>
 
@@ -52,7 +52,7 @@
 			<title>イオンタウンユーカリが丘で「summer base」開始、8月29日まで</title>
 			<link>https://prtimes.jp/main/html/rd/p/000000462.000024449.html</link>
 			<guid isPermaLink="true">https://prtimes.jp/main/html/rd/p/000000462.000024449.html</guid>
-			<category>佐倉・ユーカリが丘</category>
+			<category>ローカル・ライフ</category>
 			<description><![CDATA[佐倉市とイオンタウンなどが、8月22日から29日までイオンタウンユーカリが丘で「summer base in イオンタウン」を開催。涼しい屋内のフリースペース、段ボール迷路、工作などを用意する。基本時間は10時〜21時で、最終日の29日は15時まで。]]></description>
 		</item>
 	</channel>
