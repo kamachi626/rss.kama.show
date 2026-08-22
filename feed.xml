@@ -5,7 +5,7 @@
 		<link>https://github.com/kamachi626/rss.kama.show</link>
 		<description>ChatGPTが興味適合度を基に選定したパーソナルニュースフィード</description>
 		<language>ja</language>
-		<lastBuildDate>Sat, 22 Aug 2026 12:42:00 +0900</lastBuildDate>
+		<lastBuildDate>Sat, 22 Aug 2026 18:56:17 +0900</lastBuildDate>
 		<atom:link href="https://raw.githubusercontent.com/kamachi626/rss.kama.show/main/feed.xml" rel="self" type="application/rss+xml" />
 
 		<item>
@@ -77,7 +77,7 @@
 			<guid isPermaLink="true">https://www.reuters.com/world/asia-pacific/japan-manufacturing-expands-orders-rise-fastest-since-2018-pmi-shows-2026-08-21/</guid>
 			<pubDate>Fri, 21 Aug 2026 00:00:00 +0900</pubDate>
 			<category>経済・企業</category>
-			<description><![CDATA[8月のS&P Global日本製造業PMI速報値は55.1へ上昇し、新規受注は2018年1月以来の強い伸びとなった。半導体やAI関連需要が生産・海外受注を押し上げ、サービスを含む総合指数も改善している。<br/><br/><strong>なぜ注目:</strong> 日本株を見るうえで、景気悪化ではなくAI・半導体主導の製造業回復が進んでいるかを測る材料になる。]]></description>
+			<description><![CDATA[8月のS&amp;P Global日本製造業PMI速報値は55.1へ上昇し、新規受注は2018年1月以来の強い伸びとなった。半導体やAI関連需要が生産・海外受注を押し上げ、サービスを含む総合指数も改善している。<br/><br/><strong>なぜ注目:</strong> 日本株を見るうえで、景気悪化ではなくAI・半導体主導の製造業回復が進んでいるかを測る材料になる。]]></description>
 		</item>
 
 		<item>
@@ -195,6 +195,15 @@
 			<pubDate>Thu, 20 Aug 2026 23:00:00 +0900</pubDate>
 			<category>ローカル・ライフ</category>
 			<description><![CDATA[にじさんじのフレン・E・ルスタリオが1st Mini Album『FACETS』を12月2日に発売し、2027年2月6日に初ソロライブ「smilE」を開催すると発表。アルバム初回生産分にはライブ先行抽選シリアルが封入される。<br/><br/><strong>なぜ注目:</strong> 視聴・ライブ参加につながる具体的な日程が出たVTuberニュースで、追う価値がある。]]></description>
+		</item>
+
+		<item>
+			<title>幕張ベイパークで夜の大型マルシェ、8月22・23日に90店超が集結</title>
+			<link>https://prtimes.jp/main/html/rd/p/000000028.000184472.html</link>
+			<guid isPermaLink="true">https://prtimes.jp/main/html/rd/p/000000028.000184472.html</guid>
+			<pubDate>Fri, 14 Aug 2026 18:51:00 +0900</pubDate>
+			<category>ローカル・ライフ</category>
+			<description><![CDATA[幕張ベイパーク若葉3丁目公園で8月22日・23日の16時〜21時、「NEIGHBORHOOD MARCHE vol.5」を開催。マルシェ60店舗以上とキッチンカー30台以上が集まり、音楽ライブやライブペインティングも実施する。入場無料で、海浜幕張駅から徒歩約13分。<br/><br/><strong>なぜ注目:</strong> 千葉県内で今夜・明日に行けるイベントで、食・買い物だけでなく音楽やアートもあり、短時間の外出先として実用性が高い。]]></description>
 		</item>
 
 	</channel>
