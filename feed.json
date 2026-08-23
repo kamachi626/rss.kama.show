@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-08-23T08:04:15+09:00",
+  "generated_at": "2026-08-23T11:32:00+09:00",
   "categories": [
     "テック・開発",
     "経済・企業",
@@ -285,6 +285,21 @@
       "importance": 3,
       "interest": 4,
       "tags": ["千葉", "幕張", "イベント", "マルシェ", "音楽"]
+    },
+    {
+      "id": "neoporte-hizuki-yui-solo-event-2026-08-23",
+      "title": "Neo-Porte緋月ゆい、初ソロイベント「閃響」を10月24日に開催",
+      "url": "https://prtimes.jp/main/html/rd/p/000000684.000044525.html",
+      "source": "Brave group / Neo-Porte",
+      "published_at": "2026-08-23T10:00:00+09:00",
+      "collected_at": "2026-08-23T11:32:00+09:00",
+      "category": "ローカル・ライフ",
+      "summary": "Neo-Porte所属VTuberの緋月ゆいが、自身初となるソロイベント「Hizuki Yui Solo Event 2026『閃響』」を10月24日にヒューリックホール東京で開催すると発表した。昼夜2部制で、現地・配信の両方を用意。現地チケットはYouTubeメンバーシップ先行抽選が始まっている。",
+      "why_relevant": "VTuber関連の中でも、配信視聴だけでなく現地参加まで検討できる具体的な大型イベント情報で、公開から約1時間半の新着。",
+      "image_url": null,
+      "importance": 3,
+      "interest": 4,
+      "tags": ["Neo-Porte", "緋月ゆい", "VTuber", "ライブ", "東京"]
     }
   ]
 }
