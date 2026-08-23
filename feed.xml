@@ -5,170 +5,26 @@
 		<link>https://github.com/kamachi626/rss.kama.show</link>
 		<description>ChatGPTが興味適合度を基に選定したパーソナルニュースフィード</description>
 		<language>ja</language>
-		<lastBuildDate>Sun, 23 Aug 2026 08:04:15 +0900</lastBuildDate>
+		<lastBuildDate>Sun, 23 Aug 2026 11:32:00 +0900</lastBuildDate>
 		<atom:link href="https://raw.githubusercontent.com/kamachi626/rss.kama.show/main/feed.xml" rel="self" type="application/rss+xml" />
-
-		<item>
-			<title>Stripe、AIモデルルーターOpenRouterの買収で合意</title>
-			<link>https://stripe.com/fr-ca/newsroom/news/stripe-agrees-to-acquire-openrouter</link>
-			<guid isPermaLink="true">https://stripe.com/fr-ca/newsroom/news/stripe-agrees-to-acquire-openrouter</guid>
-			<pubDate>Wed, 19 Aug 2026 00:00:00 +0900</pubDate>
-			<category>テック・開発</category>
-			<description><![CDATA[Stripeが、80社超・400以上のAIモデルを横断してルーティングするOpenRouterの買収で合意した。StripeはToken Billingなど既存のAI向け課金基盤と組み合わせ、モデル選択、速度、価格、トークン利用を一体で最適化する構想を示している。<br/><br/><strong>なぜ注目:</strong> 複数LLMを抽象化するモデルルーターが決済・課金インフラと統合される動きで、今後のSaaS設計にも影響しうる。]]></description>
-		</item>
-
-		<item>
-			<title>Cloudflare、WSL/macOSのローカルContainers開発でFUSEを自動サポート</title>
-			<link>https://developers.cloudflare.com/changelog/post/2026-08-20-fuse-local-development/</link>
-			<guid isPermaLink="true">https://developers.cloudflare.com/changelog/post/2026-08-20-fuse-local-development/</guid>
-			<pubDate>Thu, 20 Aug 2026 00:00:00 +0900</pubDate>
-			<category>テック・開発</category>
-			<description><![CDATA[MiniflareがローカルContainersにFUSE利用に必要なDocker権限を自動付与するようになった。wrangler dev、Cloudflare Vite plugin、Miniflareに適用され、特にWSLやmacOS上のDocker VMで利用可能。R2をFUSEマウントするような開発フローが扱いやすくなる。<br/><br/><strong>なぜ注目:</strong> WSLとDockerを使う開発環境に直接関係し、Cloudflare Containersのローカル開発が扱いやすくなる。]]></description>
-		</item>
-
-		<item>
-			<title>Cloudflare AI Gateway、GPT-5.6 Solを9月18日まで50％割引</title>
-			<link>https://developers.cloudflare.com/changelog/product/ai-gateway/</link>
-			<guid isPermaLink="true">https://developers.cloudflare.com/changelog/product/ai-gateway/</guid>
-			<pubDate>Wed, 19 Aug 2026 00:00:00 +0900</pubDate>
-			<category>テック・開発</category>
-			<description><![CDATA[Cloudflare AI GatewayのUnified Billing経由でGPT-5.6 Solが期間限定50％割引。入力は100万トークンあたり2.50ドル、出力15ドル、キャッシュ読み取り0.25ドル。BYOKは対象外で、キャンペーンは2026年9月18日まで。<br/><br/><strong>なぜ注目:</strong> CloudflareベースのSaaSやAI機能を試す際、モデル利用費の比較に直結する期間限定情報。]]></description>
-		</item>
-
-		<item>
-			<title>Cloudflare Workers AIにQwen 3.8 27B、画像入力と262Kコンテキスト対応</title>
-			<link>https://developers.cloudflare.com/changelog/product/workers-ai/</link>
-			<guid isPermaLink="true">https://developers.cloudflare.com/changelog/product/workers-ai/</guid>
-			<pubDate>Mon, 17 Aug 2026 00:00:00 +0900</pubDate>
-			<category>テック・開発</category>
-			<description><![CDATA[Cloudflare Workers AIでQwen 3.8 27Bが利用可能になった。画像とテキストの入力、reasoning、function callingに対応し、コンテキスト長は262,144トークン。Workers AI bindingまたはREST API、AI Gateway経由で利用できる。<br/><br/><strong>なぜ注目:</strong> Cloudflare内でマルチモーダル＋ツール呼び出し可能なモデルを完結利用でき、個人SaaSの実装候補が増える。]]></description>
-		</item>
-
-		<item>
-			<title>Cloudflare APIの403応答にdocumentation_url、権限不足の自己解決を支援</title>
-			<link>https://developers.cloudflare.com/changelog/post/2026-08-20-contextual-403s/</link>
-			<guid isPermaLink="true">https://developers.cloudflare.com/changelog/post/2026-08-20-contextual-403s/</guid>
-			<pubDate>Fri, 21 Aug 2026 00:00:00 +0900</pubDate>
-			<category>テック・開発</category>
-			<description><![CDATA[Cloudflareは8月21日、APIの403 Forbidden応答に、拒否されたエンドポイントのドキュメントへ直接つながるdocumentation_urlを追加した。対象はほぼ全製品APIで、リンク先から必要なロールや権限を確認できる。人手のトラブルシュートだけでなく、エージェントが拒否理由を読み取り、権限申請フローへつなげる用途も想定されている。<br/><br/><strong>なぜ注目:</strong> Cloudflare APIを使う開発とAIエージェントの権限処理の双方に直結し、403時の自動復旧・承認フローを設計しやすくなる。]]></description>
-		</item>
-
-		<item>
-			<title>日本の8月製造業PMI、新規受注が2018年以来の高い伸び</title>
-			<link>https://www.reuters.com/world/asia-pacific/japan-manufacturing-expands-orders-rise-fastest-since-2018-pmi-shows-2026-08-21/</link>
-			<guid isPermaLink="true">https://www.reuters.com/world/asia-pacific/japan-manufacturing-expands-orders-rise-fastest-since-2018-pmi-shows-2026-08-21/</guid>
-			<pubDate>Fri, 21 Aug 2026 00:00:00 +0900</pubDate>
-			<category>経済・企業</category>
-			<description><![CDATA[8月のS&P Global日本製造業PMI速報値は55.1へ上昇し、新規受注は2018年1月以来の強い伸びとなった。半導体やAI関連需要が生産・海外受注を押し上げ、サービスを含む総合指数も改善している。<br/><br/><strong>なぜ注目:</strong> 日本株を見るうえで、景気悪化ではなくAI・半導体主導の製造業回復が進んでいるかを測る材料になる。]]></description>
-		</item>
-
-		<item>
-			<title>SK hynix、日本で大規模メモリー工場建設を検討との報道</title>
-			<link>https://www.reuters.com/world/asia-pacific/south-koreas-sk-hynix-considers-building-memory-chip-plant-japan-hankyoreh-2026-08-21/</link>
-			<guid isPermaLink="true">https://www.reuters.com/world/asia-pacific/south-koreas-sk-hynix-considers-building-memory-chip-plant-japan-hankyoreh-2026-08-21/</guid>
-			<pubDate>Fri, 21 Aug 2026 00:00:00 +0900</pubDate>
-			<category>経済・企業</category>
-			<description><![CDATA[Reutersによると、SK hynixが宮城県を候補としてメモリー半導体工場への大規模投資を検討していると韓国紙が報道した。実現すれば韓国半導体メーカーによる日本初の大型製造投資となる可能性があるが、SK hynixは最終決定していない。<br/><br/><strong>なぜ注目:</strong> AI向けメモリー需要と日本の半導体投資が交差する案件で、国内製造業・関連銘柄を見るうえで重要。]]></description>
-		</item>
-
-		<item>
-			<title>米テック大手のAI向け社債発行が急増、投資家に消化疲れの兆候</title>
-			<link>https://www.reuters.com/legal/transactional/us-corporate-ai-debt-surge-tests-investor-limits-fatigue-emerges-2026-08-21/</link>
-			<guid isPermaLink="true">https://www.reuters.com/legal/transactional/us-corporate-ai-debt-surge-tests-investor-limits-fatigue-emerges-2026-08-21/</guid>
-			<pubDate>Fri, 21 Aug 2026 00:00:00 +0900</pubDate>
-			<category>経済・企業</category>
-			<description><![CDATA[AmazonやAlphabetなどがAIインフラ投資を賄うため社債発行を急増させ、2026年のAI関連債務調達は2200億ドル規模に達したとReutersが報道。発行量の増加で投資家がより高い利回りを要求し、テック債のスプレッドも拡大している。<br/><br/><strong>なぜ注目:</strong> AI投資ブームの次の制約がGPUではなく資本コストになる可能性を示すため、AI株の評価にも関わる。]]></description>
-		</item>
-
-		<item>
-			<title>香港エクスプレス、成田・羽田〜香港など片道3,000円からのフラッシュセール</title>
-			<link>https://www.traicy.com/posts/20260821379735/</link>
-			<guid isPermaLink="true">https://www.traicy.com/posts/20260821379735/</guid>
-			<pubDate>Fri, 21 Aug 2026 17:48:00 +0900</pubDate>
-			<category>旅行・モビリティ</category>
-			<description><![CDATA[香港エクスプレス航空が8月23日までフラッシュセールを実施。羽田・成田・関西〜香港線がウルトラライト片道3,000円から。搭乗期間は9月1日〜10月31日。一方で燃油サーチャージは片道14,300円、諸税も別途必要。<br/><br/><strong>なぜ注目:</strong> 成田発の短距離海外旅行候補として即時性が高い。ただし表示運賃より総額確認が重要。]]></description>
-		</item>
-
-		<item>
-			<title>ANA、四国旅行で航空券＋宿5,000円引き・現地交通補助のキャンペーン</title>
-			<link>https://travel.watch.impress.co.jp/docs/news/2134766.html</link>
-			<guid isPermaLink="true">https://travel.watch.impress.co.jp/docs/news/2134766.html</guid>
-			<pubDate>Sat, 22 Aug 2026 08:00:00 +0900</pubDate>
-			<category>旅行・モビリティ</category>
-			<description><![CDATA[ANAは9月1日から2027年3月30日出発分を対象に「ANA誘遊四国キャンペーン」を実施。航空券＋宿泊が1人5,000円引きとなるほか、2,400円相当の現地ポイント、レンタカー最大5,000円引き、小豆島周遊タクシーなどを選べる。<br/><br/><strong>なぜ注目:</strong> ドライブや国内旅行の寄り道を組み立てるタイプの旅行と相性がよく、交通費・現地移動をまとめて下げられる。]]></description>
-		</item>
-
-		<item>
-			<title>Peach、成田〜仁川線を9月20日開設　片道5,680円から</title>
-			<link>https://travel.watch.impress.co.jp/docs/news/2134254.html</link>
-			<guid isPermaLink="true">https://travel.watch.impress.co.jp/docs/news/2134254.html</guid>
-			<pubDate>Thu, 20 Aug 2026 19:00:00 +0900</pubDate>
-			<category>旅行・モビリティ</category>
-			<description><![CDATA[Peach Aviationは9月20日に成田〜仁川線を開設する。運賃は片道5,680円からで、MM651便は成田9時30分発・仁川12時25分着、復路MM652便は仁川13時35分発・成田16時15分着の毎日運航。短い休暇でも現地滞在時間を取りやすい昼間帯のダイヤとなっている。<br/><br/><strong>なぜ注目:</strong> 成田発で価格と時間効率の両方が良く、近距離海外の実用的な新候補になる。]]></description>
-		</item>
-
-		<item>
-			<title>AustralopithecusとParanthropusもHomo属に？人類系統分類の再編案</title>
-			<link>https://doi.org/10.1002/ajpa.70344</link>
-			<guid isPermaLink="true">https://doi.org/10.1002/ajpa.70344</guid>
-			<pubDate>Wed, 19 Aug 2026 00:00:00 +0900</pubDate>
-			<category>科学・知識</category>
-			<description><![CDATA[American Journal of Biological Anthropology掲載の論考でIan Towle氏は、AustralopithecusとParanthropusを拡張したHomo属へ含める分類案を提示した。化石形態のモザイク性、遺伝子流動、従来の属を分ける特徴の曖昧化などを理由に、単系統群をより一貫して反映する分類を提案している。現時点では学界の合意ではなく、分類学上の提案である。<br/><br/><strong>なぜ注目:</strong> 人類進化の「属・種を何で分けるか」という問題そのものを扱い、AustralopithecusとHomoの境界を考える材料として非常に直接的。]]></description>
-		</item>
-
-		<item>
-			<title>恐竜古生物学200年の成果と次の研究課題をNature Reviewsが総括</title>
-			<link>https://www.nature.com/articles/s44358-026-00191-9</link>
-			<guid isPermaLink="true">https://www.nature.com/articles/s44358-026-00191-9</guid>
-			<pubDate>Wed, 12 Aug 2026 00:00:00 +0900</pubDate>
-			<category>科学・知識</category>
-			<description><![CDATA[Nature Reviews Biodiversityが、恐竜研究約200年の進展をレビュー。恐竜の生物学、生態、多様性、大進化を、検証可能な科学としてどこまで理解できているか整理し、今後の研究方向や新技術が解決しうる課題をまとめている。<br/><br/><strong>なぜ注目:</strong> 個別の新種ニュースではなく、現在の恐竜研究で何が分かり何が未解決かを俯瞰できる良い入口。]]></description>
-		</item>
-
-		<item>
-			<title>イオンタウンユーカリが丘で「summer base」開始、8月29日まで</title>
-			<link>https://prtimes.jp/main/html/rd/p/000000462.000024449.html</link>
-			<guid isPermaLink="true">https://prtimes.jp/main/html/rd/p/000000462.000024449.html</guid>
-			<pubDate>Sat, 22 Aug 2026 00:00:00 +0900</pubDate>
-			<category>ローカル・ライフ</category>
-			<description><![CDATA[佐倉市とイオンタウンなどが、8月22日から29日までイオンタウンユーカリが丘で「summer base in イオンタウン」を開催。涼しい屋内のフリースペース、段ボール迷路、工作などを用意する。基本時間は10時〜21時。<br/><br/><strong>なぜ注目:</strong> 自宅周辺で開催中の地域イベントとして近く、気軽に立ち寄れる。]]></description>
-		</item>
-
-		<item>
-			<title>酒々井プレミアム・アウトレット、最大80％OFFの夏最終バーゲン</title>
-			<link>https://www.premiumoutlets.co.jp/shisui/calendar/</link>
-			<guid isPermaLink="true">https://www.premiumoutlets.co.jp/shisui/calendar/</guid>
-			<pubDate>Fri, 21 Aug 2026 00:00:00 +0900</pubDate>
-			<category>ローカル・ライフ</category>
-			<description><![CDATA[酒々井プレミアム・アウトレットで8月21日〜30日に大型バーゲンを開催。施設全体では最大80％OFF。ショップニュースではG-Star Rawの2点以上50％OFF、Regalのクリアランスなども掲載され、22〜23日はヒルトン成田のキッチンカーも出店する。<br/><br/><strong>なぜ注目:</strong> 近場で服・靴を現物確認しながらセールを拾えるので行動価値が高い。]]></description>
-		</item>
-
-		<item>
-			<title>ホロライブ9周年、東京・大阪・名古屋・福岡で全国巡回展示会</title>
-			<link>https://hololive.hololivepro.com/news/20260821-01-404/</link>
-			<guid isPermaLink="true">https://hololive.hololivepro.com/news/20260821-01-404/</guid>
-			<pubDate>Fri, 21 Aug 2026 12:00:00 +0900</pubDate>
-			<category>ローカル・ライフ</category>
-			<description><![CDATA[ホロライブプロダクションは9周年企画として「hololive Grand Reception ～感謝を込めた招待状～」を発表。10月10日の東京会場TOKYO DREAM PARKを皮切りに、大阪・名古屋・福岡を巡回する公式展示会となる。<br/><br/><strong>なぜ注目:</strong> 単発グッズより規模が大きく、実際に足を運ぶ候補になるVTuberイベント情報。]]></description>
-		</item>
-
-		<item>
-			<title>にじさんじ×第四境界「PARALLEL CASE: 2434」第1弾を公開</title>
-			<link>https://www.anycolor.co.jp/news/t7z_lrbo_hr</link>
-			<guid isPermaLink="true">https://www.anycolor.co.jp/news/t7z_lrbo_hr</guid>
-			<pubDate>Fri, 21 Aug 2026 20:00:00 +0900</pubDate>
-			<category>ローカル・ライフ</category>
-			<description><![CDATA[にじさんじと、ARG的な物語体験を手がける第四境界の初コラボ「PARALLEL CASE: 2434」が公開。第1弾「CASE 01：ましろ爻の記録」は8月21日20時から調査可能となり、ましろ爻、来栖夏芽、シスター・クレアの関連グッズも販売開始。<br/><br/><strong>なぜ注目:</strong> 通常の配信・グッズとは違う探索型コンテンツで、VTuber関連でも体験性が高い新企画。]]></description>
-		</item>
-
-		<item>
-			<title>幕張ベイパークで夜の大型マルシェ、8月22・23日に90店超が集結</title>
-			<link>https://prtimes.jp/main/html/rd/p/000000028.000184472.html</link>
-			<guid isPermaLink="true">https://prtimes.jp/main/html/rd/p/000000028.000184472.html</guid>
-			<pubDate>Fri, 14 Aug 2026 18:51:00 +0900</pubDate>
-			<category>ローカル・ライフ</category>
-			<description><![CDATA[幕張ベイパーク若葉3丁目公園で8月22日・23日の16時〜21時、「NEIGHBORHOOD MARCHE vol.5」を開催。マルシェ60店舗以上とキッチンカー30台以上が集まり、音楽ライブやライブペインティングも実施する。入場無料で、海浜幕張駅から徒歩約13分。<br/><br/><strong>なぜ注目:</strong> 千葉県内で今日行けるイベントで、食・買い物だけでなく音楽やアートもあり、短時間の外出先として実用性が高い。]]></description>
-		</item>
-
+		<item><title>Stripe、AIモデルルーターOpenRouterの買収で合意</title><link>https://stripe.com/fr-ca/newsroom/news/stripe-agrees-to-acquire-openrouter</link><guid isPermaLink="true">https://stripe.com/fr-ca/newsroom/news/stripe-agrees-to-acquire-openrouter</guid><pubDate>Wed, 19 Aug 2026 00:00:00 +0900</pubDate><category>テック・開発</category><description><![CDATA[Stripeが、80社超・400以上のAIモデルを横断してルーティングするOpenRouterの買収で合意した。StripeはToken Billingなど既存のAI向け課金基盤と組み合わせ、モデル選択、速度、価格、トークン利用を一体で最適化する構想を示している。<br/><br/><strong>なぜ注目:</strong> 複数LLMを抽象化するモデルルーターが決済・課金インフラと統合される動きで、今後のSaaS設計にも影響しうる。]]></description></item>
+		<item><title>Cloudflare、WSL/macOSのローカルContainers開発でFUSEを自動サポート</title><link>https://developers.cloudflare.com/changelog/post/2026-08-20-fuse-local-development/</link><guid isPermaLink="true">https://developers.cloudflare.com/changelog/post/2026-08-20-fuse-local-development/</guid><pubDate>Thu, 20 Aug 2026 00:00:00 +0900</pubDate><category>テック・開発</category><description><![CDATA[MiniflareがローカルContainersにFUSE利用に必要なDocker権限を自動付与するようになった。wrangler dev、Cloudflare Vite plugin、Miniflareに適用され、特にWSLやmacOS上のDocker VMで利用可能。R2をFUSEマウントするような開発フローが扱いやすくなる。<br/><br/><strong>なぜ注目:</strong> WSLとDockerを使う開発環境に直接関係し、Cloudflare Containersのローカル開発が扱いやすくなる。]]></description></item>
+		<item><title>Cloudflare AI Gateway、GPT-5.6 Solを9月18日まで50％割引</title><link>https://developers.cloudflare.com/changelog/product/ai-gateway/</link><guid isPermaLink="true">https://developers.cloudflare.com/changelog/product/ai-gateway/</guid><pubDate>Wed, 19 Aug 2026 00:00:00 +0900</pubDate><category>テック・開発</category><description><![CDATA[Cloudflare AI GatewayのUnified Billing経由でGPT-5.6 Solが期間限定50％割引。入力は100万トークンあたり2.50ドル、出力15ドル、キャッシュ読み取り0.25ドル。BYOKは対象外で、キャンペーンは2026年9月18日まで。<br/><br/><strong>なぜ注目:</strong> CloudflareベースのSaaSやAI機能を試す際、モデル利用費の比較に直結する期間限定情報。]]></description></item>
+		<item><title>Cloudflare Workers AIにQwen 3.8 27B、画像入力と262Kコンテキスト対応</title><link>https://developers.cloudflare.com/changelog/product/workers-ai/</link><guid isPermaLink="true">https://developers.cloudflare.com/changelog/product/workers-ai/</guid><pubDate>Mon, 17 Aug 2026 00:00:00 +0900</pubDate><category>テック・開発</category><description><![CDATA[Cloudflare Workers AIでQwen 3.8 27Bが利用可能になった。画像とテキストの入力、reasoning、function callingに対応し、コンテキスト長は262,144トークン。Workers AI bindingまたはREST API、AI Gateway経由で利用できる。<br/><br/><strong>なぜ注目:</strong> Cloudflare内でマルチモーダル＋ツール呼び出し可能なモデルを完結利用でき、個人SaaSの実装候補が増える。]]></description></item>
+		<item><title>Cloudflare APIの403応答にdocumentation_url、権限不足の自己解決を支援</title><link>https://developers.cloudflare.com/changelog/post/2026-08-20-contextual-403s/</link><guid isPermaLink="true">https://developers.cloudflare.com/changelog/post/2026-08-20-contextual-403s/</guid><pubDate>Fri, 21 Aug 2026 00:00:00 +0900</pubDate><category>テック・開発</category><description><![CDATA[Cloudflareは8月21日、APIの403 Forbidden応答に、拒否されたエンドポイントのドキュメントへ直接つながるdocumentation_urlを追加した。対象はほぼ全製品APIで、リンク先から必要なロールや権限を確認できる。人手のトラブルシュートだけでなく、エージェントが拒否理由を読み取り、権限申請フローへつなげる用途も想定されている。<br/><br/><strong>なぜ注目:</strong> Cloudflare APIを使う開発とAIエージェントの権限処理の双方に直結し、403時の自動復旧・承認フローを設計しやすくなる。]]></description></item>
+		<item><title>日本の8月製造業PMI、新規受注が2018年以来の高い伸び</title><link>https://www.reuters.com/world/asia-pacific/japan-manufacturing-expands-orders-rise-fastest-since-2018-pmi-shows-2026-08-21/</link><guid isPermaLink="true">https://www.reuters.com/world/asia-pacific/japan-manufacturing-expands-orders-rise-fastest-since-2018-pmi-shows-2026-08-21/</guid><pubDate>Fri, 21 Aug 2026 00:00:00 +0900</pubDate><category>経済・企業</category><description><![CDATA[8月のS&amp;P Global日本製造業PMI速報値は55.1へ上昇し、新規受注は2018年1月以来の強い伸びとなった。半導体やAI関連需要が生産・海外受注を押し上げ、サービスを含む総合指数も改善している。<br/><br/><strong>なぜ注目:</strong> 日本株を見るうえで、景気悪化ではなくAI・半導体主導の製造業回復が進んでいるかを測る材料になる。]]></description></item>
+		<item><title>SK hynix、日本で大規模メモリー工場建設を検討との報道</title><link>https://www.reuters.com/world/asia-pacific/south-koreas-sk-hynix-considers-building-memory-chip-plant-japan-hankyoreh-2026-08-21/</link><guid isPermaLink="true">https://www.reuters.com/world/asia-pacific/south-koreas-sk-hynix-considers-building-memory-chip-plant-japan-hankyoreh-2026-08-21/</guid><pubDate>Fri, 21 Aug 2026 00:00:00 +0900</pubDate><category>経済・企業</category><description><![CDATA[Reutersによると、SK hynixが宮城県を候補としてメモリー半導体工場への大規模投資を検討していると韓国紙が報道した。実現すれば韓国半導体メーカーによる日本初の大型製造投資となる可能性があるが、SK hynixは最終決定していない。<br/><br/><strong>なぜ注目:</strong> AI向けメモリー需要と日本の半導体投資が交差する案件で、国内製造業・関連銘柄を見るうえで重要。]]></description></item>
+		<item><title>米テック大手のAI向け社債発行が急増、投資家に消化疲れの兆候</title><link>https://www.reuters.com/legal/transactional/us-corporate-ai-debt-surge-tests-investor-limits-fatigue-emerges-2026-08-21/</link><guid isPermaLink="true">https://www.reuters.com/legal/transactional/us-corporate-ai-debt-surge-tests-investor-limits-fatigue-emerges-2026-08-21/</guid><pubDate>Fri, 21 Aug 2026 00:00:00 +0900</pubDate><category>経済・企業</category><description><![CDATA[AmazonやAlphabetなどがAIインフラ投資を賄うため社債発行を急増させ、2026年のAI関連債務調達は2200億ドル規模に達したとReutersが報道。発行量の増加で投資家がより高い利回りを要求し、テック債のスプレッドも拡大している。<br/><br/><strong>なぜ注目:</strong> AI投資ブームの次の制約がGPUではなく資本コストになる可能性を示すため、AI株の評価にも関わる。]]></description></item>
+		<item><title>香港エクスプレス、成田・羽田〜香港など片道3,000円からのフラッシュセール</title><link>https://www.traicy.com/posts/20260821379735/</link><guid isPermaLink="true">https://www.traicy.com/posts/20260821379735/</guid><pubDate>Fri, 21 Aug 2026 17:48:00 +0900</pubDate><category>旅行・モビリティ</category><description><![CDATA[香港エクスプレス航空が8月23日までフラッシュセールを実施。羽田・成田・関西〜香港線がウルトラライト片道3,000円から。搭乗期間は9月1日〜10月31日。一方で燃油サーチャージは片道14,300円、諸税も別途必要。<br/><br/><strong>なぜ注目:</strong> 成田発の短距離海外旅行候補として即時性が高い。ただし表示運賃より総額確認が重要。]]></description></item>
+		<item><title>ANA、四国旅行で航空券＋宿5,000円引き・現地交通補助のキャンペーン</title><link>https://travel.watch.impress.co.jp/docs/news/2134766.html</link><guid isPermaLink="true">https://travel.watch.impress.co.jp/docs/news/2134766.html</guid><pubDate>Sat, 22 Aug 2026 08:00:00 +0900</pubDate><category>旅行・モビリティ</category><description><![CDATA[ANAは9月1日から2027年3月30日出発分を対象に「ANA誘遊四国キャンペーン」を実施。航空券＋宿泊が1人5,000円引きとなるほか、2,400円相当の現地ポイント、レンタカー最大5,000円引き、小豆島周遊タクシーなどを選べる。<br/><br/><strong>なぜ注目:</strong> ドライブや国内旅行の寄り道を組み立てるタイプの旅行と相性がよく、交通費・現地移動をまとめて下げられる。]]></description></item>
+		<item><title>Peach、成田〜仁川線を9月20日開設　片道5,680円から</title><link>https://travel.watch.impress.co.jp/docs/news/2134254.html</link><guid isPermaLink="true">https://travel.watch.impress.co.jp/docs/news/2134254.html</guid><pubDate>Thu, 20 Aug 2026 19:00:00 +0900</pubDate><category>旅行・モビリティ</category><description><![CDATA[Peach Aviationは9月20日に成田〜仁川線を開設する。運賃は片道5,680円からで、MM651便は成田9時30分発・仁川12時25分着、復路MM652便は仁川13時35分発・成田16時15分着の毎日運航。短い休暇でも現地滞在時間を取りやすい昼間帯のダイヤとなっている。<br/><br/><strong>なぜ注目:</strong> 成田発で価格と時間効率の両方が良く、近距離海外の実用的な新候補になる。]]></description></item>
+		<item><title>AustralopithecusとParanthropusもHomo属に？人類系統分類の再編案</title><link>https://doi.org/10.1002/ajpa.70344</link><guid isPermaLink="true">https://doi.org/10.1002/ajpa.70344</guid><pubDate>Wed, 19 Aug 2026 00:00:00 +0900</pubDate><category>科学・知識</category><description><![CDATA[American Journal of Biological Anthropology掲載の論考でIan Towle氏は、AustralopithecusとParanthropusを拡張したHomo属へ含める分類案を提示した。化石形態のモザイク性、遺伝子流動、従来の属を分ける特徴の曖昧化などを理由に、単系統群をより一貫して反映する分類を提案している。現時点では学界の合意ではなく、分類学上の提案である。<br/><br/><strong>なぜ注目:</strong> 人類進化の「属・種を何で分けるか」という問題そのものを扱い、AustralopithecusとHomoの境界を考える材料として非常に直接的。]]></description></item>
+		<item><title>恐竜古生物学200年の成果と次の研究課題をNature Reviewsが総括</title><link>https://www.nature.com/articles/s44358-026-00191-9</link><guid isPermaLink="true">https://www.nature.com/articles/s44358-026-00191-9</guid><pubDate>Wed, 12 Aug 2026 00:00:00 +0900</pubDate><category>科学・知識</category><description><![CDATA[Nature Reviews Biodiversityが、恐竜研究約200年の進展をレビュー。恐竜の生物学、生態、多様性、大進化を、検証可能な科学としてどこまで理解できているか整理し、今後の研究方向や新技術が解決しうる課題をまとめている。<br/><br/><strong>なぜ注目:</strong> 個別の新種ニュースではなく、現在の恐竜研究で何が分かり何が未解決かを俯瞰できる良い入口。]]></description></item>
+		<item><title>イオンタウンユーカリが丘で「summer base」開始、8月29日まで</title><link>https://prtimes.jp/main/html/rd/p/000000462.000024449.html</link><guid isPermaLink="true">https://prtimes.jp/main/html/rd/p/000000462.000024449.html</guid><pubDate>Sat, 22 Aug 2026 00:00:00 +0900</pubDate><category>ローカル・ライフ</category><description><![CDATA[佐倉市とイオンタウンなどが、8月22日から29日までイオンタウンユーカリが丘で「summer base in イオンタウン」を開催。涼しい屋内のフリースペース、段ボール迷路、工作などを用意する。基本時間は10時〜21時。<br/><br/><strong>なぜ注目:</strong> 自宅周辺で開催中の地域イベントとして近く、気軽に立ち寄れる。]]></description></item>
+		<item><title>酒々井プレミアム・アウトレット、最大80％OFFの夏最終バーゲン</title><link>https://www.premiumoutlets.co.jp/shisui/calendar/</link><guid isPermaLink="true">https://www.premiumoutlets.co.jp/shisui/calendar/</guid><pubDate>Fri, 21 Aug 2026 00:00:00 +0900</pubDate><category>ローカル・ライフ</category><description><![CDATA[酒々井プレミアム・アウトレットで8月21日〜30日に大型バーゲンを開催。施設全体では最大80％OFF。ショップニュースではG-Star Rawの2点以上50％OFF、Regalのクリアランスなども掲載され、22〜23日はヒルトン成田のキッチンカーも出店する。<br/><br/><strong>なぜ注目:</strong> 近場で服・靴を現物確認しながらセールを拾えるので行動価値が高い。]]></description></item>
+		<item><title>ホロライブ9周年、東京・大阪・名古屋・福岡で全国巡回展示会</title><link>https://hololive.hololivepro.com/news/20260821-01-404/</link><guid isPermaLink="true">https://hololive.hololivepro.com/news/20260821-01-404/</guid><pubDate>Fri, 21 Aug 2026 12:00:00 +0900</pubDate><category>ローカル・ライフ</category><description><![CDATA[ホロライブプロダクションは9周年企画として「hololive Grand Reception ～感謝を込めた招待状～」を発表。10月10日の東京会場TOKYO DREAM PARKを皮切りに、大阪・名古屋・福岡を巡回する公式展示会となる。<br/><br/><strong>なぜ注目:</strong> 単発グッズより規模が大きく、実際に足を運ぶ候補になるVTuberイベント情報。]]></description></item>
+		<item><title>にじさんじ×第四境界「PARALLEL CASE: 2434」第1弾を公開</title><link>https://www.anycolor.co.jp/news/t7z_lrbo_hr</link><guid isPermaLink="true">https://www.anycolor.co.jp/news/t7z_lrbo_hr</guid><pubDate>Fri, 21 Aug 2026 20:00:00 +0900</pubDate><category>ローカル・ライフ</category><description><![CDATA[にじさんじと、ARG的な物語体験を手がける第四境界の初コラボ「PARALLEL CASE: 2434」が公開。第1弾「CASE 01：ましろ爻の記録」は8月21日20時から調査可能となり、ましろ爻、来栖夏芽、シスター・クレアの関連グッズも販売開始。<br/><br/><strong>なぜ注目:</strong> 通常の配信・グッズとは違う探索型コンテンツで、VTuber関連でも体験性が高い新企画。]]></description></item>
+		<item><title>幕張ベイパークで夜の大型マルシェ、8月22・23日に90店超が集結</title><link>https://prtimes.jp/main/html/rd/p/000000028.000184472.html</link><guid isPermaLink="true">https://prtimes.jp/main/html/rd/p/000000028.000184472.html</guid><pubDate>Fri, 14 Aug 2026 18:51:00 +0900</pubDate><category>ローカル・ライフ</category><description><![CDATA[幕張ベイパーク若葉3丁目公園で8月22日・23日の16時〜21時、「NEIGHBORHOOD MARCHE vol.5」を開催。マルシェ60店舗以上とキッチンカー30台以上が集まり、音楽ライブやライブペインティングも実施する。入場無料で、海浜幕張駅から徒歩約13分。<br/><br/><strong>なぜ注目:</strong> 千葉県内で今日行けるイベントで、食・買い物だけでなく音楽やアートもあり、短時間の外出先として実用性が高い。]]></description></item>
+		<item><title>Neo-Porte緋月ゆい、初ソロイベント「閃響」を10月24日に開催</title><link>https://prtimes.jp/main/html/rd/p/000000684.000044525.html</link><guid isPermaLink="true">https://prtimes.jp/main/html/rd/p/000000684.000044525.html</guid><pubDate>Sun, 23 Aug 2026 10:00:00 +0900</pubDate><category>ローカル・ライフ</category><description><![CDATA[Neo-Porte所属VTuberの緋月ゆいが、自身初となるソロイベント「Hizuki Yui Solo Event 2026『閃響』」を10月24日にヒューリックホール東京で開催すると発表した。昼夜2部制で、現地・配信の両方を用意。現地チケットはYouTubeメンバーシップ先行抽選が始まっている。<br/><br/><strong>なぜ注目:</strong> VTuber関連の中でも、配信視聴だけでなく現地参加まで検討できる具体的な大型イベント情報。]]></description></item>
 	</channel>
 </rss>
