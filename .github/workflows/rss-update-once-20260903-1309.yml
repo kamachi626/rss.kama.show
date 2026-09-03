@@ -1,0 +1,174 @@
+name: One-shot personalized RSS update 20260903-1309
+
+on:
+  push:
+    paths:
+      - ".github/workflows/rss-update-once-20260903-1309.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Update feed
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import xml.etree.ElementTree as ET
+          from datetime import datetime, timedelta
+          from email.utils import format_datetime
+
+          RUN_AT = datetime.fromisoformat("2026-09-03T13:09:08+09:00")
+          GENERATED_AT = RUN_AT.isoformat()
+          CUTOFF = RUN_AT - timedelta(hours=24)
+          CATEGORIES = ["テック・開発","経済・企業","旅行・モビリティ","科学・知識","ローカル・ライフ"]
+          TOP = [
+              "home-assistant-2026-9-0-2026-09-03",
+              "gmo-flatt-supply-chain-threat-2026-09-03",
+              "gemini-3-8-flash-2026-09-03",
+              "yen-boj-hawkish-repricing-2026-09-03",
+              "openai-agent-auto-shutdown-2026-09-03"
+          ]
+          NEW_ITEMS = json.loads(r'''[{"id":"uber-wayve-autonomous-tokyo-2026-09-03","title":"Uber、ロンドンで英国初の自動運転配車を開始　年内に東京でも車両投入へ","url":"https://www.itmedia.co.jp/news/article/2609/03/2000001106/","source":"ITmedia NEWS","published_at":"2026-09-03T11:54:00+09:00","collected_at":"2026-09-03T13:09:08+09:00","category":"旅行・モビリティ","summary":"Uberと英Wayveがロンドンで一般利用者向け自動運転配車を開始した。WayveのAIドライバーを搭載したMustang Mach-Eを使い、当初は監督ドライバー同乗で運行する。UberはWayve搭載車を世界12市場へ広げ、ロンドン以外ではNVIDIA DRIVE Hyperionと日産リーフを組み合わせ、2026年内に東京から投入する計画。","why_relevant":"東京で年内に自動運転配車が実利用へ近づく具体的なロードマップで、車・モビリティの変化として行動圏にも関係する。","image_url":null,"importance":4,"interest":5,"tags":["Uber","Wayve","自動運転","東京","日産リーフ"]},{"id":"converse-made-in-japan-2026-09-03","title":"CONVERSE、日本製「ALL STAR J」「ONE STAR J」新作4モデルを9月発売","url":"https://prtimes.jp/main/html/rd/p/000000209.000010657.html","source":"コンバースジャパン株式会社","published_at":"2026-09-03T11:00:00+09:00","collected_at":"2026-09-03T13:09:08+09:00","category":"ローカル・ライフ","summary":"CONVERSEが2026年秋冬の「MADE IN JAPAN」新作4モデルを発表。国産キャンバスのALL STAR J HI/OXはクラシックレッド、国産レザーのALL STAR J OXはヴィンテージブラック、ONE STAR Jはスムースレザーのブルーを展開する。価格は1万6500円〜3万3000円で、9月11日・18日から公式オンラインと取扱店で発売。","why_relevant":"革・ワーク系を含め靴を実物で選ぶ傾向に合い、価格と発売日が明確な日本製シューズの購入候補。","image_url":null,"importance":2,"interest":4,"tags":["CONVERSE","MADE IN JAPAN","ALL STAR","ONE STAR","シューズ"]},{"id":"windows11-kb5120998-cursor-bug-2026-09-03","title":"Windows 11プレビューパッチ、日本語など非英語環境でマウスカーソル設定消失の不具合","url":"https://forest.watch.impress.co.jp/docs/news/2137821.html","source":"窓の杜","published_at":"2026-09-03T10:40:00+09:00","collected_at":"2026-09-03T13:09:08+09:00","category":"テック・開発","summary":"Windows 11 24H2/25H2向け8月プレビューパッチ「KB5120998」で、英語以外の言語環境ではマウスカーソルの個人設定が読み込まれず既定へ戻る場合があるとMicrosoftが確認した。日本語環境も対象になり得る。現時点で回避策はなく修正準備中で、このパッチは任意適用のため、カーソルをカスタマイズしている場合は見送るのが無難。","why_relevant":"Windowsを使う開発環境で、任意更新を適用するか今すぐ判断できる実用的な不具合情報。","image_url":null,"importance":3,"interest":4,"tags":["Windows 11","KB5120998","不具合","Windows Update","日本語環境"]},{"id":"yen-boj-hawkish-repricing-2026-09-03","title":"円、一時157.95円へ上昇　日銀の早期利上げ観測を市場が再評価","url":"https://www.reuters.com/world/asia-pacific/yen-spotlight-after-sudden-jump-2026-09-03/","source":"Reuters","published_at":"2026-09-03T10:03:00+09:00","collected_at":"2026-09-03T13:09:08+09:00","category":"経済・企業","summary":"円はアジア時間に一時1ドル157.95円まで上昇し、前夜の0.9％高を延長した。急騰で為替介入観測も出たが、市場関係者は日銀の高田創審議委員による機動的な利上げ発言を受けた金融政策見通しの再評価が主因とみる。9月の日銀利上げは市場でほぼ完全に織り込まれる状況となり、円はユーロやポンドに対しても上昇した。","why_relevant":"国内株・配当株の買い場、円建て資産、輸出入企業の評価に直接効く金利・為替前提の変化。","image_url":null,"importance":5,"interest":5,"tags":["円相場","日銀","利上げ","日本株","為替"]},{"id":"gmo-flatt-supply-chain-threat-2026-09-03","title":"GMO Flatt Security、半年で悪性パッケージ約3.1万件　供給網攻撃レポート公開","url":"https://prtimes.jp/main/html/rd/p/000000074.000027502.html","source":"GMO Flatt Security","published_at":"2026-09-03T10:00:00+09:00","collected_at":"2026-09-03T13:09:08+09:00","category":"テック・開発","summary":"GMO Flatt Securityがnpm、PyPI、RubyGems、Go modules、crates.io、Packagistを181日間観測した「ソフトウェアサプライチェーン 脅威レポート 2026」を公開。約1900万件を解析して約3万1000件を悪性と判定し、悪性パッケージがゼロの日はなかった。SSH鍵、クラウド権限、公開権限やブラウザ・Slack等の認証情報も標的になる。","why_relevant":"開発端末・CI/CD・依存パッケージ管理に直結する国内観測データで、自宅・業務の開発環境の防御優先度を見直す材料になる。","image_url":null,"importance":5,"interest":5,"tags":["ソフトウェアサプライチェーン","npm","PyPI","セキュリティ","Takumi Guard"]},{"id":"japan-services-pmi-2026-09-03","title":"日本の8月サービスPMI、52.5へ上昇　5カ月ぶり高水準で利上げ観測を補強","url":"https://www.reuters.com/world/asia-pacific/japan-services-growth-hits-five-month-high-pmi-shows-2026-09-03/","source":"Reuters","published_at":"2026-09-03T09:33:00+09:00","collected_at":"2026-09-03T13:09:08+09:00","category":"経済・企業","summary":"S&P Globalの8月日本サービス業PMI確報値は52.5となり、7月の51.2から上昇して5カ月ぶりの高水準となった。新規受注は26カ月連続で増え、雇用も12カ月連続で拡大。投入価格の上昇率はやや鈍化した一方、販売価格は過去2番目の速さで上昇し、総合PMIも53.5と6カ月ぶりの強さを示した。","why_relevant":"景気の底堅さと価格転嫁の継続を同時に示し、日銀利上げと内需・バリュー株の判断材料になる。","image_url":null,"importance":4,"interest":4,"tags":["PMI","日本経済","サービス業","日銀","日本株"]},{"id":"palomo-isetan-shinjuku-popup-2026-09-03","title":"PALOMO、日本初POP-UPを伊勢丹新宿で開催　シェルコードバンのローファーやブーツを展開","url":"https://prtimes.jp/main/html/rd/p/000000011.000124534.html","source":"株式会社キャンディー","published_at":"2026-09-03T09:30:00+09:00","collected_at":"2026-09-03T13:09:08+09:00","category":"ローカル・ライフ","summary":"1953年創業の製靴背景を持つPALOMOが、日本初のPOP-UP STOREを9月30日〜10月13日に伊勢丹新宿店メンズ館地下1階で開催する。日本初披露となるモカシン、ローファー、ブーツを展開し、HorweenのShell CordovanやC.F. Steadのスエードを採用。Genuine Handsewn、Goodyear Weltなど本格製法を背景に持つ。","why_relevant":"革靴の好みに非常に近く、伊勢丹新宿でコードバンや本格製法の実物を試着できる具体的な訪問候補。","image_url":null,"importance":2,"interest":5,"tags":["PALOMO","伊勢丹新宿","革靴","Shell Cordovan","ポップアップ"]},{"id":"gemini-3-8-flash-2026-09-03","title":"Google「Gemini 3.8 Flash」公開　推論・コーディング強化、セキュリティ特化版も","url":"https://forest.watch.impress.co.jp/docs/news/2137807.html","source":"窓の杜","published_at":"2026-09-03T08:08:00+09:00","collected_at":"2026-09-03T13:09:08+09:00","category":"テック・開発","summary":"Googleが「Gemini 3.8 Flash」とセキュリティ特化の「3.8 Flash Cyber」を発表。3.8 Flashは従来の速度・価格を維持しつつ、ソフトウェアエンジニアリング、エージェント処理、多段階推論を強化した。Cyber版は脆弱性検出・自動修正向けで、Chromeの検証では大型商用モデルより正しいパッチを2.6倍多く生成したという。","why_relevant":"AIコーディング/APIのモデル選定と、セキュリティ自動化の両方に直接関係する新モデル。","image_url":null,"importance":5,"interest":5,"tags":["Gemini","Google AI","コーディング","AIエージェント","セキュリティ"]},{"id":"eneos-overseas-expansion-2026-09-02","title":"ENEOS、海外M&Aを成長軸へ　国内燃料需要減を見据え収益の半分を海外へ","url":"https://www.reuters.com/business/energy/eneos-acquisitions-test-japanese-oil-giants-global-ambitions-2026-09-02/","source":"Reuters","published_at":"2026-09-02T16:12:00+09:00","collected_at":"2026-09-03T13:09:08+09:00","category":"経済・企業","summary":"ENEOSが国内燃料需要の縮小を見据え、海外下流事業とトレーディングを成長の中心に据えている。Chevronのアジア・豪州資産取得やシンガポール製油所への50％出資などを進め、2030年までに海外売上比率50％を目標とする。CFOは追加M&Aが主要な成長ドライバーになるとの見方を示し、新規資産で2030年度に約250億円の営業利益を狙う。","why_relevant":"日本の高配当・バリュー株候補を考えるうえで、ENEOSの国内縮小リスクと海外成長余地を評価する材料になる。","image_url":null,"importance":4,"interest":5,"tags":["ENEOS","エネルギー","M&A","日本株","海外展開"]}]''')
+
+          def parse_dt(value):
+              if not value:
+                  return None
+              try:
+                  return datetime.fromisoformat(value.replace("Z", "+00:00"))
+              except ValueError:
+                  return None
+
+          with open("feed.json", "r", encoding="utf-8") as f:
+              old_feed = json.load(f)
+
+          selected = []
+          seen_ids = set()
+          seen_urls = set()
+          for item in old_feed.get("items", []):
+              dt = parse_dt(item.get("published_at"))
+              if dt is None or not (CUTOFF <= dt <= RUN_AT):
+                  continue
+              if item.get("category") not in CATEGORIES:
+                  continue
+              if item.get("id") in seen_ids or item.get("url") in seen_urls:
+                  continue
+              selected.append(item)
+              seen_ids.add(item["id"])
+              seen_urls.add(item["url"])
+
+          for item in NEW_ITEMS:
+              dt = parse_dt(item.get("published_at"))
+              if dt is None or not (CUTOFF <= dt <= RUN_AT):
+                  raise RuntimeError(f"new item outside 24h window: {item.get('id')}")
+              if item["url"] in seen_urls or item["id"] in seen_ids:
+                  continue
+              selected.append(item)
+              seen_ids.add(item["id"])
+              seen_urls.add(item["url"])
+
+          selected.sort(key=lambda x: parse_dt(x["published_at"]), reverse=True)
+          selected = selected[:50]
+          ids = {x["id"] for x in selected}
+          top = [x for x in TOP if x in ids]
+          if len(top) < 5:
+              ranked = sorted(
+                  [x for x in selected if x["id"] not in top],
+                  key=lambda x: (x.get("interest", 0) + x.get("importance", 0), parse_dt(x["published_at"])),
+                  reverse=True,
+              )
+              top.extend(x["id"] for x in ranked[:5-len(top)])
+
+          if len(selected) != len({x["id"] for x in selected}):
+              raise RuntimeError("duplicate ids")
+          if len(selected) != len({x["url"] for x in selected}):
+              raise RuntimeError("duplicate urls")
+          if any(parse_dt(x["published_at"]) < CUTOFF or parse_dt(x["published_at"]) > RUN_AT for x in selected):
+              raise RuntimeError("feed contains item outside 24h window")
+          if any(x.get("category") not in CATEGORIES for x in selected):
+              raise RuntimeError("invalid category")
+          if len(top) != 5 or any(x not in ids for x in top):
+              raise RuntimeError("invalid TOP 5")
+
+          feed = {
+              "version": 1,
+              "generated_at": GENERATED_AT,
+              "categories": CATEGORIES,
+              "top": top,
+              "items": selected,
+          }
+          with open("feed.json", "w", encoding="utf-8") as f:
+              json.dump(feed, f, ensure_ascii=False, separators=(",", ":"))
+              f.write("\n")
+
+          archive_path = "archive/2026-09-03.json"
+          archive_items = []
+          if os.path.exists(archive_path):
+              with open(archive_path, "r", encoding="utf-8") as f:
+                  archive_items = json.load(f).get("items", [])
+
+          by_id = {x["id"]: x for x in archive_items}
+          archive_urls = {x.get("url") for x in archive_items}
+          for item in selected:
+              if item["id"] in by_id:
+                  continue
+              if item["url"] in archive_urls:
+                  continue
+              archive_items.append(item)
+              by_id[item["id"]] = item
+              archive_urls.add(item["url"])
+
+          archive_items.sort(key=lambda x: parse_dt(x["published_at"]) or datetime.min.replace(tzinfo=RUN_AT.tzinfo), reverse=True)
+          archive = {
+              "version": 1,
+              "generated_at": GENERATED_AT,
+              "categories": CATEGORIES,
+              "top": top,
+              "items": archive_items,
+          }
+          os.makedirs("archive", exist_ok=True)
+          with open(archive_path, "w", encoding="utf-8") as f:
+              json.dump(archive, f, ensure_ascii=False, separators=(",", ":"))
+              f.write("\n")
+
+          rss = ET.Element("rss", {"version": "2.0"})
+          channel = ET.SubElement(rss, "channel")
+          ET.SubElement(channel, "title").text = "kama.show Personalized News"
+          ET.SubElement(channel, "link").text = "https://rss.kama.show/"
+          ET.SubElement(channel, "description").text = "Personalized news feed"
+          ET.SubElement(channel, "lastBuildDate").text = format_datetime(RUN_AT)
+
+          for item in selected:
+              node = ET.SubElement(channel, "item")
+              ET.SubElement(node, "title").text = item["title"]
+              ET.SubElement(node, "link").text = item["url"]
+              guid = ET.SubElement(node, "guid", {"isPermaLink": "false"})
+              guid.text = item["id"]
+              ET.SubElement(node, "pubDate").text = format_datetime(parse_dt(item["published_at"]))
+              ET.SubElement(node, "category").text = item["category"]
+              ET.SubElement(node, "description").text = item["summary"]
+
+          xml_text = ET.tostring(rss, encoding="utf-8", xml_declaration=True).decode("utf-8")
+          with open("feed.xml", "w", encoding="utf-8") as f:
+              f.write(xml_text)
+
+          print(f"selected={len(selected)} top={top} archive={len(archive_items)}")
+          PY
+      - name: Commit feed
+        shell: bash
+        run: |
+          git config user.name "kama.show automation"
+          git config user.email "actions@users.noreply.github.com"
+          git add feed.json feed.xml archive/2026-09-03.json
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "Update personalized news feed for 2026-09-03 13:09 JST"
+          git push
