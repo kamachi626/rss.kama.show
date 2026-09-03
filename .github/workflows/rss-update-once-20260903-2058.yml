@@ -1,0 +1,185 @@
+name: One-shot personalized RSS update 20260903-2058
+
+on:
+  push:
+    paths:
+      - ".github/workflows/rss-update-once-20260903-2058.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Update feed
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import xml.etree.ElementTree as ET
+          from datetime import datetime, timedelta
+          from email.utils import format_datetime
+
+          RUN_AT = datetime.fromisoformat("2026-09-03T20:58:39+09:00")
+          GENERATED_AT = RUN_AT.isoformat()
+          CUTOFF = RUN_AT - timedelta(hours=24)
+          CATEGORIES = ["テック・開発","経済・企業","旅行・モビリティ","科学・知識","ローカル・ライフ"]
+          TOP = [
+              "home-assistant-2026-9-0-2026-09-03",
+              "proart-gr1x-rtx-spark-2026-09-03",
+              "gmo-flatt-supply-chain-threat-2026-09-03",
+              "gemini-3-8-flash-2026-09-03",
+              "yen-boj-hawkish-repricing-2026-09-03"
+          ]
+          NEW_ITEMS = json.loads(r'''[
+            {"id":"fairfield-marriott-early90-2026-09-03","title":"道の駅隣接フェアフィールド、90日前予約で最大20％引きの「早割90」","url":"https://travel.watch.impress.co.jp/docs/news/2138043.html","source":"トラベル Watch","published_at":"2026-09-03T19:00:00+09:00","collected_at":"2026-09-03T20:58:39+09:00","category":"旅行・モビリティ","summary":"全国の道の駅に隣接する「フェアフィールド・バイ・マリオット 道の駅プロジェクト」が、宿泊日の90日前までの予約で最大20％引きになる「早割90」を販売。対象は全国29施設で、販売は10月31日まで、宿泊は12月1日〜2027年2月28日。冬のドライブ旅や温泉・食を組み合わせる拠点として使いやすい。","why_relevant":"車で各地を回る旅行と相性がよく、冬の長距離ドライブを早めに決める場合に宿泊費を具体的に下げられる。","image_url":null,"importance":2,"interest":4,"tags":["Fairfield by Marriott","道の駅","早割","ドライブ","ホテル"]},
+            {"id":"ooedo-onsen-rvpark-2026-09-03","title":"大江戸温泉物語、全国7施設で1泊3500円からの認定RVパークを開始","url":"https://travel.watch.impress.co.jp/docs/news/2138071.html","source":"トラベル Watch","published_at":"2026-09-03T18:38:00+09:00","collected_at":"2026-09-03T20:58:39+09:00","category":"旅行・モビリティ","summary":"大江戸温泉物語が全国7施設の駐車場で、日本RV協会認定の車中泊サービスを開始。1泊1台3500円で、電源は別途1000円。ホテルの大浴場・露天風呂や予約制の夕食バイキングを利用でき、24時間使える館内トイレと夜間スタッフも備える。石川・岐阜・和歌山など、温泉と車中泊を組みやすい拠点が増えた。","why_relevant":"長距離ドライブと温泉を組み合わせる旅で、宿泊費を抑えつつ入浴と夜間設備を確保できる実用的な選択肢。","image_url":null,"importance":3,"interest":5,"tags":["大江戸温泉物語","RVパーク","車中泊","温泉","ドライブ"]},
+            {"id":"bft-scs3-webinar-2026-09-03","title":"BFT、SCS★3対応の実装工数を解説する無料ウェビナーを9月15・16日に開催","url":"https://prtimes.jp/main/html/rd/p/000000171.000022287.html","source":"株式会社BFT","published_at":"2026-09-03T17:34:00+09:00","collected_at":"2026-09-03T20:58:39+09:00","category":"テック・開発","summary":"BFTが、経済産業省のサプライチェーンセキュリティ評価制度「SCS★3」対応について、規程整備、資産台帳の運用、技術対策に必要な工数感や典型的なつまずきを扱う無料ウェビナーを9月15・16日に開催する。経産省・IPAの一次情報をベースに、内製で進めるか外部伴走を使うかの判断基準まで実務寄りに解説する。","why_relevant":"ソフトウェア供給網や企業セキュリティの実装責任を考えるうえで、新制度を具体的な工数と運用に落とす材料になる。","image_url":null,"importance":3,"interest":4,"tags":["SCS★3","サプライチェーンセキュリティ","経済産業省","IPA","ウェビナー"]},
+            {"id":"minamisatsuma-asteroid-2026-09-03","title":"小惑星「Minamisatsuma」を国際天文学連合が正式認定　発見から28年","url":"https://www.fnn.jp/articles/-/1107089","source":"鹿児島テレビ / FNNプライムオンライン","published_at":"2026-09-03T16:30:00+09:00","collected_at":"2026-09-03T20:58:39+09:00","category":"科学・知識","summary":"鹿児島県南さつま市出身のアマチュア天文家・宇都文昭さんが1998年に発見した小惑星が、国際天文学連合から「Minamisatsuma」の名称で正式認定された。火星と木星の間の小惑星帯にある天体で、発見から28年を経て地元名が学術名として登録。9月2日には登録証が南さつま市へ寄贈された。","why_relevant":"鹿児島と宇宙・天文学が交わるニッチな話題で、地域名が国際的な天体名称として残る珍しいニュース。","image_url":null,"importance":2,"interest":4,"tags":["Minamisatsuma","小惑星","国際天文学連合","鹿児島","天文学"]},
+            {"id":"aso-fukkou-wari-2026-09-03","title":"熊本県「阿蘇ふっこう割」9月7日開始　1泊最大5000円引き＋2000円クーポン","url":"https://travel.watch.impress.co.jp/docs/news/2137956.html","source":"トラベル Watch","published_at":"2026-09-03T15:26:00+09:00","collected_at":"2026-09-03T20:58:39+09:00","category":"旅行・モビリティ","summary":"阿蘇市が9月7〜30日の宿泊を対象に「阿蘇ふっこう割」を実施。1人1泊1万円以上なら5000円、5000円以上1万円未満なら2000円を割り引き、さらに市内の飲食店や土産店などで使える2000円分の地域クーポンを付与する。予約は対象宿へ直接行う方式で、楽天トラベルやじゃらんなどOTA経由は対象外。","why_relevant":"九州の温泉・ドライブ旅行を組む場合に割引幅が大きく、予約経路を間違えなければ実際の旅費を下げられる。","image_url":null,"importance":3,"interest":4,"tags":["阿蘇","熊本","旅行支援","温泉","地域クーポン"]},
+            {"id":"hthree-fitting-room-2026-09-03","title":"台湾発HTHREE、手染め革靴の完全予約制試着イベントを東京で10〜11月開催","url":"https://prtimes.jp/main/html/rd/p/000000198.000033945.html","source":"Pinkoi","published_at":"2026-09-03T14:00:00+09:00","collected_at":"2026-09-03T20:58:39+09:00","category":"ローカル・ライフ","summary":"台湾発の手染め革靴ブランドHTHREEが、完全予約制の試着・受注イベント「HTHREE Fitting Room」を東京で10〜11月に開催。実際に試着しながらサイズやカラーを相談し、職人が一足ずつ仕上げる受注制作靴を選べる。会場購入者にはカラータッセルも用意され、オンラインだけでは判断しにくいフィット感を確認できる。","why_relevant":"革靴は実物とサイズ感を確認して選びたいニーズに合い、東京で色とフィットを詰められる具体的な試着候補。","image_url":null,"importance":2,"interest":5,"tags":["HTHREE","Pinkoi","革靴","手染め","試着イベント"]},
+            {"id":"secrid-hankyu-mens-popup-2026-09-03","title":"SECRID、阪急メンズ東京で新色・新型を試せる期間限定POP-UP","url":"https://prtimes.jp/main/html/rd/p/000000018.000003557.html","source":"株式会社元林","published_at":"2026-09-03T13:49:00+09:00","collected_at":"2026-09-03T20:58:39+09:00","category":"ローカル・ライフ","summary":"オランダ発のカードウォレット「SECRID」が、9月29日まで阪急メンズ東京でPOP-UPを開催。定番モデルに加え、今秋の新色や海外先行で人気の新商品を展開し、店頭で質感、サイズ、特許取得のカードスライド機構を実際に確認できる。薄型財布やカードケースを買い替えるなら、比較・試用まで一度にできる機会。","why_relevant":"有楽町で実物を触って選べる革小物の期間限定情報で、オンライン写真だけでは分からない厚みや操作感を確認できる。","image_url":null,"importance":2,"interest":3,"tags":["SECRID","阪急メンズ東京","財布","革小物","POP-UP"]},
+            {"id":"proart-gr1x-rtx-spark-2026-09-03","title":"ASUS「ProArt GR1X Mini PC」正式発表　120BのLLMをローカル実行","url":"https://pc.watch.impress.co.jp/docs/news/2137917.html","source":"PC Watch","published_at":"2026-09-03T13:09:00+09:00","collected_at":"2026-09-03T20:58:39+09:00","category":"テック・開発","summary":"ASUSがNVIDIA RTX Spark N1X搭載の「ProArt GR1X Mini PC」を正式発表した。FP4で最大1PFLOPS、64GBまたは128GBのLPDDR5Xを備え、120BパラメータのLLMと最大100万トークンのコンテキストをローカル実行できるとする。150mm角・厚さ51mmで10GbEとWi‑Fi 7も搭載し、価格・発売時期は未定。","why_relevant":"ミニPCや自宅サーバの延長で、クラウド依存を抑えて大規模LLMを動かす小型機として比較価値が非常に高い。","image_url":null,"importance":4,"interest":5,"tags":["ASUS","ProArt GR1X","RTX Spark","ローカルLLM","ミニPC"]},
+            {"id":"jmweston-fusain-2026-09-03","title":"J.M. WESTON、最上級ドレスシューズ「Fusain」コレクションを発表","url":"https://prtimes.jp/main/html/rd/p/000000013.000107578.html","source":"ジェイエムウエストン・ジャパン株式会社","published_at":"2026-09-03T12:39:00+09:00","collected_at":"2026-09-03T20:58:39+09:00","category":"ローカル・ライフ","summary":"J.M. WESTONが、メゾンの最上級ドレスシューズコレクション「Fusain（フュザン）」を発表。木炭を意味する名称の通り、流れるようなシルエット、スマートな踵、シャープなトゥを軸に、ラスト設計とラインの均整を突き詰めたコレクション。ワーク系とは対照的な本格ドレス靴として比較対象になる。","why_relevant":"革靴をラストや造形まで見て選ぶ関心に合い、PALOMOやワークブーツとは別軸の上質なドレス靴候補。","image_url":null,"importance":2,"interest":5,"tags":["J.M. WESTON","Fusain","革靴","ドレスシューズ","フランス"]},
+            {"id":"terminalfix-clickfix-2026-09-03","title":"新型ClickFix「TerminalFix」、偽Cloudflare認証からPowerShellへ誘導","url":"https://www.itmedia.co.jp/enterprise/articles/2609/03/news014.html","source":"ITmedia エンタープライズ","published_at":"2026-09-03T07:00:00+09:00","collected_at":"2026-09-03T20:58:39+09:00","category":"テック・開発","summary":"Microsoftが、偽エラーや偽認証画面から利用者自身にコマンドを実行させる「ClickFix」の新派生「TerminalFix」を観測。従来のWin+RではなくWindows Terminal／PowerShellへ複数行スクリプトを貼り付けさせ、改ざんサイト上の偽Cloudflare Turnstileを入口に多段階侵入へつなげる。本人確認を装うコマンド貼り付け指示は実行しないのが基本。","why_relevant":"Windows、PowerShell、Cloudflareを日常的に扱う環境で、普段の操作を逆手に取る攻撃なので認知しておく実用価値が高い。","image_url":null,"importance":4,"interest":5,"tags":["TerminalFix","ClickFix","Windows Terminal","PowerShell","Cloudflare"]}
+          ]''')
+
+          def parse_dt(value):
+              if not value:
+                  return None
+              try:
+                  return datetime.fromisoformat(value.replace("Z", "+00:00"))
+              except ValueError:
+                  return None
+
+          with open("feed.json", "r", encoding="utf-8") as f:
+              old_feed = json.load(f)
+
+          selected = []
+          seen_ids = set()
+          seen_urls = set()
+          for item in old_feed.get("items", []):
+              dt = parse_dt(item.get("published_at"))
+              if dt is None or not (CUTOFF <= dt <= RUN_AT):
+                  continue
+              if item.get("category") not in CATEGORIES:
+                  continue
+              if item.get("id") in seen_ids or item.get("url") in seen_urls:
+                  continue
+              selected.append(item)
+              seen_ids.add(item["id"])
+              seen_urls.add(item["url"])
+
+          for item in NEW_ITEMS:
+              dt = parse_dt(item.get("published_at"))
+              if dt is None or not (CUTOFF <= dt <= RUN_AT):
+                  raise RuntimeError(f"new item outside 24h window: {item.get('id')}")
+              if item["url"] in seen_urls or item["id"] in seen_ids:
+                  continue
+              selected.append(item)
+              seen_ids.add(item["id"])
+              seen_urls.add(item["url"])
+
+          selected.sort(key=lambda x: parse_dt(x["published_at"]), reverse=True)
+          selected = selected[:50]
+          ids = {x["id"] for x in selected}
+          top = [x for x in TOP if x in ids]
+          if len(top) < 5:
+              ranked = sorted(
+                  [x for x in selected if x["id"] not in top],
+                  key=lambda x: (x.get("interest", 0) + x.get("importance", 0), parse_dt(x["published_at"])),
+                  reverse=True,
+              )
+              top.extend(x["id"] for x in ranked[:5-len(top)])
+
+          if len(selected) != len({x["id"] for x in selected}):
+              raise RuntimeError("duplicate ids")
+          if len(selected) != len({x["url"] for x in selected}):
+              raise RuntimeError("duplicate urls")
+          if any(parse_dt(x["published_at"]) < CUTOFF or parse_dt(x["published_at"]) > RUN_AT for x in selected):
+              raise RuntimeError("feed contains item outside 24h window")
+          if any(x.get("category") not in CATEGORIES for x in selected):
+              raise RuntimeError("invalid category")
+          if len(top) != 5 or any(x not in ids for x in top):
+              raise RuntimeError("invalid TOP 5")
+
+          feed = {
+              "version": 1,
+              "generated_at": GENERATED_AT,
+              "categories": CATEGORIES,
+              "top": top,
+              "items": selected,
+          }
+          with open("feed.json", "w", encoding="utf-8") as f:
+              json.dump(feed, f, ensure_ascii=False, separators=(",", ":"))
+              f.write("\n")
+
+          archive_path = "archive/2026-09-03.json"
+          archive_items = []
+          if os.path.exists(archive_path):
+              with open(archive_path, "r", encoding="utf-8") as f:
+                  archive_items = json.load(f).get("items", [])
+
+          by_id = {x["id"]: x for x in archive_items}
+          archive_urls = {x.get("url") for x in archive_items}
+          for item in selected:
+              if item["id"] in by_id:
+                  continue
+              if item["url"] in archive_urls:
+                  continue
+              archive_items.append(item)
+              by_id[item["id"]] = item
+              archive_urls.add(item["url"])
+
+          archive_items.sort(key=lambda x: parse_dt(x["published_at"]) or datetime.min.replace(tzinfo=RUN_AT.tzinfo), reverse=True)
+          archive = {
+              "version": 1,
+              "generated_at": GENERATED_AT,
+              "categories": CATEGORIES,
+              "top": top,
+              "items": archive_items,
+          }
+          os.makedirs("archive", exist_ok=True)
+          with open(archive_path, "w", encoding="utf-8") as f:
+              json.dump(archive, f, ensure_ascii=False, separators=(",", ":"))
+              f.write("\n")
+
+          rss = ET.Element("rss", {"version": "2.0"})
+          channel = ET.SubElement(rss, "channel")
+          ET.SubElement(channel, "title").text = "kama.show Personalized News"
+          ET.SubElement(channel, "link").text = "https://rss.kama.show/"
+          ET.SubElement(channel, "description").text = "Personalized news feed"
+          ET.SubElement(channel, "lastBuildDate").text = format_datetime(RUN_AT)
+
+          for item in selected:
+              node = ET.SubElement(channel, "item")
+              ET.SubElement(node, "title").text = item["title"]
+              ET.SubElement(node, "link").text = item["url"]
+              guid = ET.SubElement(node, "guid", {"isPermaLink": "false"})
+              guid.text = item["id"]
+              ET.SubElement(node, "pubDate").text = format_datetime(parse_dt(item["published_at"]))
+              ET.SubElement(node, "category").text = item["category"]
+              ET.SubElement(node, "description").text = item["summary"]
+
+          xml_text = ET.tostring(rss, encoding="utf-8", xml_declaration=True).decode("utf-8")
+          with open("feed.xml", "w", encoding="utf-8") as f:
+              f.write(xml_text)
+
+          print(f"selected={len(selected)} top={top} archive={len(archive_items)}")
+          PY
+      - name: Commit feed
+        shell: bash
+        run: |
+          git config user.name "kama.show automation"
+          git config user.email "actions@users.noreply.github.com"
+          git add feed.json feed.xml archive/2026-09-03.json
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "Update personalized news feed for 2026-09-03 20:58 JST"
+          git push
